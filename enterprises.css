@@ -1,0 +1,265 @@
+ /* === Base Styles === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #5b5f97c8, #303a3caa);
+  color: #333;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* === Header & Navigation === */
+header, footer {
+  background: linear-gradient(to right, #002147, #005c97);
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+  animation: slideFade 1s ease-in-out;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1em;
+  transition: max-height 0.3s ease-in-out;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #00b4d8;
+}
+
+/* === Logo === */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.highlight {
+  color: #00b4d8;
+}
+
+/* === Section Base Styles === */
+section {
+  background: linear-gradient(to right, #0d1b2a, #1b263b);
+  color: white;
+  padding: 60px 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeInUp 1s ease-in-out;
+  text-align: center;
+}
+
+/* === Welcome Section === */
+.welcome-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.welcome-text p {
+  font-size: 18px;
+  margin: 10px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #fff;
+  color: #005baa;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.btn:hover {
+  background: #070c10;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+}
+
+.services-list {
+  list-style-type: disc;         /* ✅ Show default bullets */
+  list-style-position: inside;   /* ✅ Bullets inside the box */
+  text-align: left;              /* ✅ Align text with bullets */
+  padding-left: 20px;            /* ✅ Add left space */
+  max-width: 400px;              /* ✅ Keep it neat */
+}
+
+
+/* === Why Us Section === */
+#why-us {
+  background: linear-gradient(to right, #0d1b2a, #1b263b);
+}
+#why-us h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #00b4d8;
+}
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.why-card {
+  background: #ffffff;
+  color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.why-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.why-card p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* === Gallery === */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* === Testimonial Box === */
+.testimonial {
+  background-color: #e6f4ff;
+  border-left: 5px solid #00b4d8;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #111;
+}
+
+/* === WhatsApp Floating Button === */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.whatsapp-float:hover {
+  background-color: #128c7e;
+}
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+/* === Footer === */
+footer {
+  font-size: 14px;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideFade {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+  nav {
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      max-height: 0;
+  }
+  nav.show {
+      max-height: 500px;
+  }
+  .why-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+  .why-card {
+      width: 90%;
+  }
+  .welcome-text h1 {
+      font-size: 28px;
+  }
+  .welcome-text p {
+      font-size: 16px;
+  }
+}
